@@ -3,20 +3,34 @@ import React from "react";
 const Resume = () => {
   const handleDownload = () => {
     const resumeContent = document.getElementById("resume-content").innerHTML;
-    const originalContent = document.body.innerHTML;
 
-    // Set the body's HTML to only the resume content
-    document.body.innerHTML = resumeContent;
+    const printWindow = window.open("", "", "width=800,height=600");
 
-    // Trigger the print dialog
-    window.print();
+    printWindow.document.open();
+    printWindow.document.write(`
+      <html>
+        <head>
+          <title>Print Resume</title>
+          <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            /* Add any additional styling for print view if needed */
+          </style>
+        </head>
+        <body>
+          ${resumeContent}
+        </body>
+      </html>
+    `);
+    printWindow.document.close();
 
-    // Restore the original HTML after print
-    document.body.innerHTML = originalContent;
-
-    // Ensure React re-renders after modifying the DOM
-    window.location.reload();
+    printWindow.onload = () => {
+      printWindow.print();
+      printWindow.onafterprint = () => {
+        printWindow.close();
+      };
+    };
   };
+
   return (
     <div className="w-full flex items-center justify-center" id="resume-content">
       <section className="bg-backgroundColor py-10 px-5 md:px-20 border border-borderColor rounded-lg">
@@ -30,38 +44,34 @@ const Resume = () => {
             </p>
             <div>
               <a
-                href="dilipdandi4@gmail.com"
+                href="mailto:dilipdandi4@gmail.com"
                 className="text-textColor hover:text-green-400 font-semibold"
               >
                 dilipdandi4@gmail.com |
               </a>
               <a
-                href="tel-+91 7666833806"
+                href="tel:+917666833806"
                 className="text-textColor hover:text-green-400 font-semibold"
               >
-                {" "}
-                (+91) 7666833806 |
+                {" "}(+91) 7666833806 |
               </a>
               <a
-                href="linkedin.com/in/dilipdandi"
+                href="https://linkedin.com/in/dilipdandi"
                 className="text-textColor hover:text-green-400 font-semibold"
               >
-                {" "}
-                linkedin.com/in/dilipdandi |
+                {" "}linkedin.com/in/dilipdandi |
               </a>
               <a
-                href="github.com/dilipdandi"
+                href="https://github.com/dilipdandi"
                 className="text-textColor hover:text-green-400 font-semibold"
               >
-                {" "}
-                github.com/dilipdandi
+                {" "}github.com/dilipdandi
               </a>
             </div>
             <button onClick={handleDownload} className="button-8 w-fit px-6 py-2 bg-backgroundColor text-textColor rounded-lg hover:bg-backgroundColor transition duration-300">
               Download Resume
             </button>
           </div>
-
           <div className="mb-8">
             <h2 className="text-2xl font-semibold text-textColor mb-3">
               Profile Summary
@@ -250,7 +260,7 @@ const Resume = () => {
               )}
             </div>
           </div>
-        </div>
+          </div>
       </section>
     </div>
   );
