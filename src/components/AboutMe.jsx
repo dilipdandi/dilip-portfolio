@@ -1,10 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 import TypingEffect from 'react-typing-effect';
 import profilePic from "../assets/profilePic.jpg";
+import { Link } from "react-router-dom";
+
 
 const AboutMe = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+
+  const handleLinkClick = () => {
+    setIsMenuOpen(false); 
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -62,14 +68,15 @@ automation testing frameworks. I am committed to continuous learning and improve
 the latest industry trends and best practices to deliver high-quality, scalable solutions. My dedication to both
 individual and team success drives me to consistently seek out new challenges and opportunities for growth.
         </p>
-        <div className="mt-4 flex justify-center md:justify-start">
-          <a
-            href="contact"
-            className="button-32 text-textColor px-4 py-2 rounded-lg hover:bg-backgroundColor transition duration-300"
-          >
-            Contact Me
-          </a>
-        </div>
+        <li className="mt-6 items-center justify-center">
+            <Link
+              to="contact"
+              className="button-32 hover:underline"
+              onClick={handleLinkClick} 
+            >
+              Contact
+            </Link>
+          </li>
       </figure>
     </section>
   );
