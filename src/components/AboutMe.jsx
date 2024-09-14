@@ -70,7 +70,7 @@ individual and team success drives me to consistently seek out new challenges an
         </p>
         <li className="mt-6 items-center justify-center">
             <Link
-              to="contact"
+              to="/contact"
               className="button-32 hover:underline"
               onClick={handleLinkClick} 
             >
