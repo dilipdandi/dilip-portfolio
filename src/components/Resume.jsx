@@ -13,7 +13,6 @@ const Resume = () => {
           <title>Print Resume</title>
           <style>
             body { font-family: Arial, sans-serif; margin: 20px; }
-            /* Add any additional styling for print view if needed */
           </style>
         </head>
         <body>
