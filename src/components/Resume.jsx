@@ -214,6 +214,7 @@ const Resume = () => {
                 "PHP",
                 "MySQL",
                 "Automation Testing",
+                "Web Development",
               ].map((skill) => (
                 <span
                   key={skill}
