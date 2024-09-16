@@ -93,7 +93,7 @@ const Resume = () => {
             <div className="space-y-4">
               <div>
                 <h3 className="text-xl font-semibold text-textColor">
-                  Master's in Computer Applications
+                  Master's in Computer Application
                 </h3>
                 <p className="text-textColor">
                   Dr.J.J.Magdum College of Engineering, Jaysingpur, Dist -
@@ -103,7 +103,7 @@ const Resume = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-textColor">
-                  Bachelor's in Computer Science
+                  Bachelor's in Computer Application
                 </h3>
                 <p className="text-textColor">
                   Mangalvedhekar Institute of Management, Solapur | 2022
