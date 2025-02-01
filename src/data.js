@@ -100,6 +100,7 @@ const skills = [
     },
   ];
   
+  
   export const data = {
     skills,
     interpersonalSkills,

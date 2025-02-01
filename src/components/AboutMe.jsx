@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import TypingEffect from 'react-typing-effect';
 import profilePic from "../assets/profilePic.jpg";
 import { Link } from "react-router-dom";
+import Summary from './Summary';
 
 
 const AboutMe = () => {
@@ -42,16 +43,7 @@ const AboutMe = () => {
           alt="Dilip Dandi"
           className="img-animation w-56 h-72 object-cover mb-4"
         />
-        <p className="mt-4">
-       
-I am a passionate software engineer with hands-on experience in web development and automation testing. 
-I enjoy creating innovative solutions that enhance user experiences and am particularly skilled in designing 
-user-friendly interfaces and efficient back-end systems. My expertise lies in front-end and back-end development,
-including a strong foundation in technologies like JavaScript, React, and Node.js, as well as proficiency in 
-automation testing frameworks. I am committed to continuous learning and improvement, staying up-to-date with
-the latest industry trends and best practices to deliver high-quality, scalable solutions. My dedication to both
-individual and team success drives me to consistently seek out new challenges and opportunities for growth.
-        </p>
+        <Summary />
         <li className="mt-6 items-center justify-center">
             <Link
               to="/contact"

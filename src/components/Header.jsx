@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import profilePic from "../assets/profilePic.jpg";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -15,20 +14,14 @@ const Header = () => {
 
   return (
     <header className="content p-4 fixed w-full border-b top-0 left-0 z-50">
-      <nav className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center space-x-4">
-          <div className="text-lg font-bold truncate md:whitespace-nowrap">
-            DILIP SANTOSH DANDI
-          </div>
-        </div>
-
+      <nav className="container mx-auto flex items-center justify-center">
         <div className="md:hidden">
           <button
             onClick={handleMenuToggle}
             className="btn focus:outline-none bg-transparent"
           >
             <svg
-              className="w-6 h-6 text-textColor"
+              className="w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -52,7 +45,7 @@ const Header = () => {
           <li>
             <Link
               to={"resume"}
-              className="btn hover:text-gray-300 hover:underline"
+              className="btn hover:text-gray-300"
               onClick={handleLinkClick} 
             >
               Resume
@@ -61,7 +54,7 @@ const Header = () => {
           <li>
             <Link
               to={"/"}
-              className="btn hover:text-gray-300 hover:underline"
+              className="btn hover:text-gray-300"
               onClick={handleLinkClick} 
             >
               About Me
@@ -70,7 +63,7 @@ const Header = () => {
           <li>
             <Link
               to="education"
-              className="btn hover:text-gray-300 hover:underline"
+              className="btn hover:text-gray-300 "
               onClick={handleLinkClick} 
             >
               Education
@@ -79,7 +72,7 @@ const Header = () => {
           <li>
             <Link
               to="skills"
-              className="btn hover:text-gray-300 hover:underline"
+              className="btn hover:text-gray-300 "
               onClick={handleLinkClick} 
             >
               Skills
@@ -88,7 +81,7 @@ const Header = () => {
           <li>
             <Link
               to="projects"
-              className="btn hover:text-gray-300 hover:underline"
+              className="btn hover:text-gray-300 "
               onClick={handleLinkClick} 
             >
               Projects
@@ -97,7 +90,7 @@ const Header = () => {
           <li>
             <Link
               to="certification"
-              className="btn hover:text-gray-300 hover:underline"
+              className="btn hover:text-gray-300"
               onClick={handleLinkClick} 
             >
               Certification
@@ -106,7 +99,7 @@ const Header = () => {
           <li>
             <Link
               to="contact"
-              className="btn hover:text-gray-300 hover:underline"
+              className="btn hover:text-gray-300"
               onClick={handleLinkClick} 
             >
               Contact

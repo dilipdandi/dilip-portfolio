@@ -10,7 +10,7 @@ const Certificate = ({ name, link }) => {
         target="_blank"
         rel="noopener noreferrer"
         href={link}
-        className="button-8 mt-2 md:mt-0"
+        className="btn mt-2 md:mt-0"
       >
         View
       </a>

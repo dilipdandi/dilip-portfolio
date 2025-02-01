@@ -3,6 +3,7 @@ import {data} from "../data.js"
 import Education from "./ui/Education.jsx";
 import Project from "./ui/project.jsx";
 import Certificate from "./ui/Certificate.jsx";
+import Summary from "./Summary.jsx";
 
 const Resume = () => {
 
@@ -78,7 +79,7 @@ const Resume = () => {
                 {" "}github.com/dilipdandi
               </a>
             </div>
-            <button onClick={handleDownload} className="button-8 w-fit px-6 py-2 rounded-lg transition duration-300">
+            <button onClick={handleDownload} className="btn w-fit px-6 py-2 rounded-lg transition duration-300">
               Download Resume
             </button>
           </div>
@@ -86,15 +87,7 @@ const Resume = () => {
             <h2 className="text-2xl font-semibold mb-3">
               Profile Summary
             </h2>
-            <p className="leading-relaxed">
-              Highly poised and dedicated, with a strong talent for design
-              principles and robust proficiency in various programming
-              languages. Adept at collaborating in dynamic team environments and
-              passionate about crafting user-friendly, innovative web solutions.
-              Skilled in both front-end and back-end development, Possesses a
-              keen eye for detail and a commitment to continuous learning and
-              improvement.
-            </p>
+           <Summary />
           </div>
 
           <div className="mb-8">
@@ -119,7 +112,7 @@ const Resume = () => {
               Projects
             </h2>
             {projects.map((item) =>(
-              <figure className="flex flex-col my-4">
+              <figure className="flex flex-col justify-between w-full bg-highlightBg px-2 py-2 rounded-xl">
               <Project
               key={item.name}
               name={item.name}
@@ -134,9 +127,9 @@ const Resume = () => {
             </h2>
             {skills.map((skill,idx) =>{
               return(
-                <div key={idx} className="flex items-center justify-center w-full bg-highlightBg px-4 py-2 border rounded-xl">
+                <figure key={idx} className="border flex items-center justify-center w-full bg-highlightBg px-2 py-2 rounded-xl">
                   <p>{skill.name}</p>
-                </div>
+                </figure>
               )
             })}
           </div>
@@ -173,7 +166,7 @@ const Resume = () => {
                 (interest) => (
                   <span
                     key={interest}
-                    className="px-4 py-2 rounded-full"
+                    className="border my-2 px-4 py-2 rounded-full"
                   >
                     {interest}
                   </span>
