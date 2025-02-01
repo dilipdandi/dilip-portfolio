@@ -134,7 +134,7 @@ const Resume = () => {
             </h2>
             {skills.map((skill,idx) =>{
               return(
-                <div key={idx} className="flex flex-colgap-4">
+                <div key={idx} className="flex items-center justify-center w-full bg-highlightBg px-4 py-2 border rounded-xl">
                   <p>{skill.name}</p>
                 </div>
               )
@@ -146,8 +146,8 @@ const Resume = () => {
             </h2>
             {interpersonalSkills.map((skill,idx) =>{
               return(
-                <div key={idx} className="flex flex-row gap-2">
-                  <p className="w-full flex flex-row">{skill.name}</p>
+                <div key={idx} className="flex items-center justify-center w-full bg-highlightBg px-4 py-2 border rounded-xl">
+                  <p className="w-full flex flex-col text-center">{skill.name}</p>
                 </div>
               )
             })}
