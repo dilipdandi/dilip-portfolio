@@ -18,7 +18,7 @@ const AboutMe = () => {
         <img
           src={profilePic}
           alt="Dilip Dandi"
-          className="img-animation zoom-out w-52 h-64 object-cover my-4"
+          className="img-animation zoom-out w-52 h-64 object-cover my-8"
         />
         <Summary />
             <Link
