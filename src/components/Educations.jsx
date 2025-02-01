@@ -4,8 +4,8 @@ import { data } from "../data.js";
 const Educations = () => {
   const { education } = data;
   return (
-    <section className="w-full py-2 px-4 md:py-4 md:px-4 bg-backgroundColor border border-borderColor rounded-xl">
-      <h1 className="text-xl md:text-2xl font-bold mb-4 md:mb-4 text-textColor">
+    <section className="content w-full py-2 px-4 md:py-4 md:px-4 border rounded-xl">
+      <h1 className="text-xl md:text-2xl font-bold mb-4 md:mb-4">
         EDUCATION
       </h1>
       {education.map((edu, index) => (

@@ -7,90 +7,62 @@
 }
 
 body {
-  background: #181818;
+  background: radial-gradient(#186a5e, #053339);
 }
-
 html {
   scroll-behavior: smooth;
 }
 
+.content{
+  color: #221c18;
+  background: linear-gradient(#4df8df, #4df0f8);
+}
+
+.border{
+  box-shadow: 0 2px 8px rgba(35, 34, 34, 0.6);
+  border-radius: 6px;
+}
 
 
-/* CSS */
-.button-8 {
-  background-color: #e1ecf4;
-  border-radius: 3px;
-  border: 1px solid #7aa7c7;
-  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
-  box-sizing: border-box;
-  color: #39739d;
+.btn{
+  width: fit-content;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background: #12352f;
+  color: #edfcfa;
+  font-size: 1.2rem;
   cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.15385;
-  margin: 0;
-  outline: none;
-  padding: 8px .8em;
+}
+
+ .btn:hover {
+  background: #051715;
+}
+
+
+
+ img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
-  white-space: nowrap;
+  
 }
 
-.button-8:hover,
-.button-8:focus {
-  background-color: #b3d3ea;
-  color: #2c5777;
-}
-
-.button-8:focus {
-  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
-}
-
-.button-8:active {
-  background-color: #a0c7e4;
-  box-shadow: none;
-  color: #2c5777;
-}
-
-
-/* CSS */
-.button-32 {
-  background-color: #fff000;
-  border-radius: 12px;
-  color: #000;
-  cursor: pointer;
-  font-weight: bold;
-  padding: 10px 15px;
-  text-align: center;
-  transition: 200ms;
+ img::after{
+  position: absolute;
+  height: 100%;
   width: 100%;
-  box-sizing: border-box;
-  border: 0;
-  font-size: 16px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  background-color: red;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 20px;
 }
 
-.button-32:not(:disabled):hover,
-.button-32:not(:disabled):focus {
-  outline: 0;
-  background: #f4e603;
-  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
-}
-
-.button-32:disabled {
-  filter: saturate(0.2) opacity(0.5);
-  -webkit-filter: saturate(0.2) opacity(0.5);
-  cursor: not-allowed;
-}
 @keyframes zoomOut {
   0% {
     transform: scale(0.4);

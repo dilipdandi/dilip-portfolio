@@ -35,30 +35,14 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <section id="about-me-section" ref={sectionRef} className="p-6 md:p-12 bg-backgroundColor">
+    <section id="about-me-section" ref={sectionRef} className="p-6 md:p-12 content">
       <figure className="flex flex-col items-center text-center">
         <img
           src={profilePic}
           alt="Dilip Dandi"
-          className={`w-56 h-72 object-cover mb-4 shadow-lg items-center justify-center border-4 border-primaryColor transform ${
-            isVisible ? 'zoom-out' : ''
-          }`}
+          className="img-animation w-56 h-72 object-cover mb-4"
         />
-        <figcaption className="text-3xl font-bold text-textColor">
-          <TypingEffect
-            text={['DILIP SANTOSH DANDI']}
-            speed={100}
-            typingDelay={400}
-          />
-        </figcaption>
-        <figcaption className="text-2xl font-bold text-center text-textColor mt-2">
-          <TypingEffect
-            text={['Web Developer', 'Automation Tester']}
-            speed={100}
-            typingDelay={200}
-          />
-        </figcaption>
-        <p className="mt-4 text-textColor">
+        <p className="mt-4">
        
 I am a passionate software engineer with hands-on experience in web development and automation testing. 
 I enjoy creating innovative solutions that enhance user experiences and am particularly skilled in designing 
@@ -71,7 +55,7 @@ individual and team success drives me to consistently seek out new challenges an
         <li className="mt-6 items-center justify-center">
             <Link
               to="/contact"
-              className="button-32 hover:underline"
+              className="btn"
               onClick={handleLinkClick} 
             >
               Contact

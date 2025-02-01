@@ -1,6 +1,17 @@
 import React from "react";
+import {data} from "../data.js"
+import Education from "./ui/Education.jsx";
+import Project from "./ui/project.jsx";
+import Certificate from "./ui/Certificate.jsx";
 
 const Resume = () => {
+
+  const {education} = data;
+  const {skills} = data;
+  const {interpersonalSkills} = data;
+  const {projects} = data;
+  const {certificates} = data;
+
   const handleDownload = () => {
     const resumeContent = document.getElementById("resume-content").innerHTML;
 
@@ -31,51 +42,51 @@ const Resume = () => {
   };
 
   return (
-    <div className="w-full flex items-center justify-center" id="resume-content">
-      <section className="bg-backgroundColor py-10 px-5 md:px-20 border border-borderColor rounded-lg">
-        <div className="container mx-auto max-w-5xl bg-backgroundColor p-8 rounded-lg shadow-md">
+    <div className="content w-full flex items-center justify-center" id="resume-content">
+      <section className="content py-10 px-5 md:px-20 rounded-lg">
+        <div className="content container mx-auto max-w-5xl border p-8 rounded-lg shadow-md">
           <div className="text-center mb-10 flex flex-col gap-4 items-center justify-center">
-            <h1 className="text-4xl font-bold text-textColor mb-4">
+            <h1 className="text-4xl font-bold mb-4">
               Dilip Santosh Dandi
             </h1>
-            <p className="text-xl text-textColor">
+            <p className="text-xl">
               Web Developer | Automation Tester
             </p>
             <div>
               <a
                 href="mailto:dilipdandi4@gmail.com"
-                className="text-textColor hover:text-green-400 font-semibold"
+                className="hover:text-green-400 font-semibold"
               >
                 dilipdandi4@gmail.com |
               </a>
               <a
                 href="tel:+917666833806"
-                className="text-textColor hover:text-green-400 font-semibold"
+                className="hover:text-green-400 font-semibold"
               >
                 {" "}(+91) 7666833806 |
               </a>
               <a
                 href="https://linkedin.com/in/dilipdandi"
-                className="text-textColor hover:text-green-400 font-semibold"
+                className="hover:text-green-400 font-semibold"
               >
                 {" "}linkedin.com/in/dilipdandi |
               </a>
               <a
                 href="https://github.com/dilipdandi"
-                className="text-textColor hover:text-green-400 font-semibold"
+                className="hover:text-green-400 font-semibold"
               >
                 {" "}github.com/dilipdandi
               </a>
             </div>
-            <button onClick={handleDownload} className="button-8 w-fit px-6 py-2 bg-backgroundColor text-textColor rounded-lg hover:bg-backgroundColor transition duration-300">
+            <button onClick={handleDownload} className="button-8 w-fit px-6 py-2 rounded-lg transition duration-300">
               Download Resume
             </button>
           </div>
           <div className="mb-8">
-            <h2 className="text-2xl font-semibold text-textColor mb-3">
+            <h2 className="text-2xl font-semibold mb-3">
               Profile Summary
             </h2>
-            <p className="text-textColor leading-relaxed">
+            <p className="leading-relaxed">
               Highly poised and dedicated, with a strong talent for design
               principles and robust proficiency in various programming
               languages. Adept at collaborating in dynamic team environments and
@@ -87,172 +98,82 @@ const Resume = () => {
           </div>
 
           <div className="mb-8">
-            <h2 className="text-2xl font-semibold text-textColor mb-3">
+            <h2 className="text-2xl font-semibold mb-3">
               Education
             </h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-xl font-semibold text-textColor">
-                  Master's in Computer Application
-                </h3>
-                <p className="text-textColor">
-                  Dr.J.J.Magdum College of Engineering, Jaysingpur, Dist -
-                  Kolhapur | 2024
-                </p>
-                <p className="text-textColor">Percentage:- 69.71% </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-textColor">
-                  Bachelor's in Computer Application
-                </h3>
-                <p className="text-textColor">
-                  Mangalvedhekar Institute of Management, Solapur | 2022
-                </p>
-                <p className="text-textColor">Percentage:- 76.77% </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-textColor">
-                  Higher Secondary 12th (Commerce)
-                </h3>
-                <p className="text-textColor">
-                  Kuchan Junior College, Solapur | 2019
-                </p>
-                <p className="text-textColor">Percentage:- 43.85% </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-textColor">
-                  Secondary Education 10th
-                </h3>
-                <p className="text-textColor">
-                  Shri Neelkanteshwar Prashala, Solapur | 2017
-                </p>
-                <p className="text-textColor">Percentage:- 53.40% </p>
-              </div>
-            </div>
+            {education.map((edu) => (
+              <figure key={edu.degree}>
+                <Education
+                institution={edu.institution}
+                degree={edu.degree}
+                year={edu.year}
+                percentage={edu.percentage}
+                />
+
+              </figure>
+            ))}
+            
           </div>
           <div className="mb-8">
-            <h2 className="text-2xl font-semibold text-textColor mb-3">
+            <h2 className="text-2xl font-semibold mb-3">
               Projects
             </h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-xl font-semibold text-textColor">
-                  HEALTH AND FITNESS TRACKER
-                </h3>
-                <ul className="list-disc pl-5 mt-2 text-textColor">
-                  <li>
-                    This Health and Fitness Tracker application is made using
-                    reactJs with TalwindCSS for the front end, Node.js for the
-                    back end, and MySQL Workbench for the database.
-                  </li>
-                  <li>
-                    Leveraged Node.js to build scalable and secure backend
-                    functionalities.
-                  </li>
-                  <li>
-                    Utilized MySQL for efficient and reliable data storage,
-                    retrieval, and management, ensuring data integrity and
-                    optimal performance.
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-textColor">
-                  GYM MANAGEMENT SYSTEM
-                </h3>
-                <ul className="list-disc pl-5 mt-2 text-textColor">
-                  <li>
-                    Developed a comprehensive Gym Management System using PHP
-                    and MySQL, seamlessly integrating all operational aspects to
-                    enhance facility management efficiency.
-                  </li>
-                  <li>
-                    Engineered robust functionalities in the Gym Management
-                    System to streamline member registration, class scheduling,
-                    and payment processing, significantly improving
-                    administrative workflows.
-                  </li>
-                  <li>
-                    Leveraged PHP and MySQL to build a scalable Gym Management
-                    System, ensuring reliable data handling and operational
-                    integration for an improved member and staff experience.
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-textColor">
-                  Automated E - Commerce Websites (OrangeHRM, Saucedemo,
-                  Flipkart, Makemytrip, Indianrailways etc )
-                </h3>
-                <ul className="list-disc pl-5 mt-2 text-textColor">
-                  <li>Technology - Automation Testing (Selenium, TestNG)</li>
-                  <li>
-                    Implemented & Automated the Website using Automation tool
-                    Selenium and TestNG Test Automation framework.
-                  </li>
-                  <li>
-                    Executed the Testcases and updated the status as
-                    passes/failed by Report generation.
-                  </li>
-                </ul>
-              </div>
-            </div>
+            {projects.map((item) =>(
+              <figure className="flex flex-col my-4">
+              <Project
+              key={item.name}
+              name={item.name}
+              gitLink={item.gitLink}
+              />
+              </figure>
+            ))}
           </div>
           <div className="mb-8">
-            <h2 className="text-2xl font-semibold text-textColor mb-3">
+            <h2 className="text-2xl font-semibold mb-3">
               Skills
             </h2>
-            <div className="flex flex-wrap gap-4">
-              {[
-                "Core Java",
-                "Python",
-                "Selenium Webdriver",
-                "JavaScript",
-                "React",
-                "HTML",
-                "CSS",
-                "PHP",
-                "MySQL",
-                "Automation Testing",
-                "Web Development",
-              ].map((skill) => (
-                <span
-                  key={skill}
-                  className="px-4 py-2 bg-backgroundColor text-textColor rounded-full"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
+            {skills.map((skill,idx) =>{
+              return(
+                <div key={idx} className="flex flex-colgap-4">
+                  <p>{skill.name}</p>
+                </div>
+              )
+            })}
           </div>
           <div className="mb-8">
-            <h2 className="text-2xl font-semibold text-textColor">
+            <h2 className="text-2xl font-semibold mb-3">
+              INTERPERSONAL Skills
+            </h2>
+            {interpersonalSkills.map((skill,idx) =>{
+              return(
+                <div key={idx} className="flex flex-row gap-2">
+                  <p className="w-full flex flex-row">{skill.name}</p>
+                </div>
+              )
+            })}
+          </div>
+          <div className="mb-8">
+            <h2 className="text-2xl font-semibold">
               Certifications
             </h2>
-            <ul className="list-disc pl-5 text-textColor">
-              <li>Python For Data Science - IBM</li>
-              <li>Java Mastery Intermediate - Udemy</li>
-              <li>Javascript with HTML5, CSS3 - Udemy</li>
-              <li>
-                Selenium Webdriver With Java & TestNG Testung Framework -Udemy
-              </li>
-              <li>Agile Methodology Virtual Experience Program - Cognizant</li>
-              <li>Mastering C & C++ Programming -Udemy</li>
-              <li>Web Development - MERN Stack - Udemy</li>
-              <li>Selenium Essential Training - Linkedin</li>
-              <li>Python For Data Science - IBM</li>
-              <li>Java Webdriver Automation: Mastering Selenium Web Testing</li>
-              <li>Communication Skills - TCS ION</li>
-            </ul>
+              {certificates.map((item) => (
+                <figure className="flex flex-col my-4">
+               <Certificate 
+               key={item.link} 
+               name={item.name}
+               link={item.link} 
+               />
+               </figure>
+              ))}
           </div>
           <div className="mb-8">
-            <h2 className="text-2xl font-semibold text-textColor">Interests</h2>
+            <h2 className="text-2xl font-semibold">Interests</h2>
             <div className="flex flex-wrap gap-4">
               {["Travelling", "Cooking", "Googling", "Video Gaming"].map(
                 (interest) => (
                   <span
                     key={interest}
-                    className="px-4 py-2 bg-backgroundColor text-textColor rounded-full"
+                    className="px-4 py-2 rounded-full"
                   >
                     {interest}
                   </span>

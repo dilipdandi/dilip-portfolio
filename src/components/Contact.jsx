@@ -31,23 +31,23 @@ const Contact = () => {
   };
 
   return (
-    <section className="w-fit h-fit mx-auto px-2 py-4 bg-backgroundColor rounded-xl border border-borderColor">
+    <section className="content w-fit h-fit mx-auto px-2 py-4 rounded-xl border">
       <ToastContainer />
-      <h1 className="text-2xl md:text-3xl font-bold text-center mb-2 text-primary text-textColor">
+      <h1 className="text-2xl md:text-3xl font-bold text-center mb-2 text-primary ">
         CONTACT ME
       </h1>
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="flex flex-col gap-6 bg-backgroundColor p-4 rounded-lg shadow-lg"
+        className="flex flex-col gap-6 p-4 rounded-lg shadow-lg"
       >
         <div className="flex flex-col md:flex-row gap-6">
           <div className="flex flex-col w-full">
-            <label htmlFor="name" className="text-lg text-textColor mb-2 ">
+            <label htmlFor="name" className="text-lg mb-2 ">
               Name
             </label>
             <input
-              className="w-full bg-gray-900 border border-borderColor text-gray-200 px-4 py-2 rounded-lg outline-none placeholder-gray-400"
+              className="w-full bg-gray-900 border text-gray-200 px-4 py-2 rounded-lg outline-none placeholder-gray-400"
               type="text"
               id="name"
               name="user_name"
@@ -56,11 +56,11 @@ const Contact = () => {
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="email" className="text-lg text-textColor mb-2">
+            <label htmlFor="email" className="text-lg mb-2">
               Email
             </label>
             <input
-              className="w-full bg-gray-900 border border-borderColor text-gray-200 px-4 py-2 rounded-lg outline-none placeholder-gray-400"
+              className="w-full bg-gray-900 border text-gray-200 px-4 py-2 rounded-lg outline-none placeholder-gray-400"
               type="email"
               id="email"
               name="user_email"
@@ -70,18 +70,18 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex flex-col">
-          <label htmlFor="message" className="text-lg text-textColor mb-2">
+          <label htmlFor="message" className="text-lg mb-2">
             Message
           </label>
           <textarea
-            className="w-full bg-gray-900 border border-borderColor text-gray-200 px-4 py-2 rounded-lg outline-none placeholder-gray-400"
+            className="w-full bg-gray-900 border text-gray-200 px-4 py-2 rounded-lg outline-none placeholder-gray-400"
             rows="2"
             name="message"
             id="message"
             placeholder="Your Message"
           ></textarea>
         </div>
-        <button className="button-32" type="submit">
+        <button className="btn" type="submit">
           Send
         </button>
       </form>

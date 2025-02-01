@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-backgroundColor text-textColor p-4 fixed w-full border-b top-0 left-0 z-50">
+    <header className="content p-4 fixed w-full border-b top-0 left-0 z-50">
       <nav className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <div className="text-lg font-bold truncate md:whitespace-nowrap">
@@ -25,7 +25,7 @@ const Header = () => {
         <div className="md:hidden">
           <button
             onClick={handleMenuToggle}
-            className="focus:outline-none bg-transparent"
+            className="btn focus:outline-none bg-transparent"
           >
             <svg
               className="w-6 h-6 text-textColor"
@@ -52,7 +52,7 @@ const Header = () => {
           <li>
             <Link
               to={"resume"}
-              className="button-32 hover:text-gray-300 hover:underline"
+              className="btn hover:text-gray-300 hover:underline"
               onClick={handleLinkClick} 
             >
               Resume
@@ -61,7 +61,7 @@ const Header = () => {
           <li>
             <Link
               to={"/"}
-              className="button-32 hover:text-gray-300 hover:underline"
+              className="btn hover:text-gray-300 hover:underline"
               onClick={handleLinkClick} 
             >
               About Me
@@ -70,7 +70,7 @@ const Header = () => {
           <li>
             <Link
               to="education"
-              className="button-32 hover:text-gray-300 hover:underline"
+              className="btn hover:text-gray-300 hover:underline"
               onClick={handleLinkClick} 
             >
               Education
@@ -79,7 +79,7 @@ const Header = () => {
           <li>
             <Link
               to="skills"
-              className="button-32 hover:text-gray-300 hover:underline"
+              className="btn hover:text-gray-300 hover:underline"
               onClick={handleLinkClick} 
             >
               Skills
@@ -88,7 +88,7 @@ const Header = () => {
           <li>
             <Link
               to="projects"
-              className="button-32 hover:text-gray-300 hover:underline"
+              className="btn hover:text-gray-300 hover:underline"
               onClick={handleLinkClick} 
             >
               Projects
@@ -97,7 +97,7 @@ const Header = () => {
           <li>
             <Link
               to="certification"
-              className="button-32 hover:text-gray-300 hover:underline"
+              className="btn hover:text-gray-300 hover:underline"
               onClick={handleLinkClick} 
             >
               Certification
@@ -106,7 +106,7 @@ const Header = () => {
           <li>
             <Link
               to="contact"
-              className="button-32 hover:text-gray-300 hover:underline"
+              className="btn hover:text-gray-300 hover:underline"
               onClick={handleLinkClick} 
             >
               Contact
