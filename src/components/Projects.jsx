@@ -4,7 +4,7 @@ import { data } from "../data.js";
 const Projects = () => {
   const { projects } = data;
   return (
-    <article className="content w-full flex flex-col gap-4 border px-6 py-4 rounded-xl md:px-8 md:py-8 lg:px-6  lg:py-6">
+    <article className="content border w-full flex flex-col gap-4 px-6 py-4 rounded-xl md:px-8 md:py-8 lg:px-6  lg:py-6">
       <h2 className="text-xl font-bold md:text-2xl lg:text-3xl">
         PROJECTS
       </h2>

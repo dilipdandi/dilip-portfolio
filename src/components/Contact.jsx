@@ -31,7 +31,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="content w-fit h-fit mx-auto px-2 py-4 rounded-xl border">
+    <section className="content w-fit h-fit mx-auto my-12 px-2 py-4 rounded-xl border">
       <ToastContainer />
       <h1 className="text-2xl md:text-3xl font-bold text-center mb-2 text-primary ">
         CONTACT ME
@@ -47,7 +47,7 @@ const Contact = () => {
               Name
             </label>
             <input
-              className="w-full bg-gray-900 border text-gray-200 px-4 py-2 rounded-lg outline-none placeholder-gray-400"
+              className="contact-input w-full bg-gray-900 border text-gray-200 px-4 py-2 rounded-lg outline-none placeholder-gray-400"
               type="text"
               id="name"
               name="user_name"
@@ -60,7 +60,7 @@ const Contact = () => {
               Email
             </label>
             <input
-              className="w-full bg-gray-900 border text-gray-200 px-4 py-2 rounded-lg outline-none placeholder-gray-400"
+              className="contact-input w-full bg-gray-900 border text-gray-200 px-4 py-2 rounded-lg outline-none placeholder-gray-400"
               type="email"
               id="email"
               name="user_email"
@@ -74,7 +74,7 @@ const Contact = () => {
             Message
           </label>
           <textarea
-            className="w-full bg-gray-900 border text-gray-200 px-4 py-2 rounded-lg outline-none placeholder-gray-400"
+            className="contact-input w-full border px-4 py-2 rounded-lg outline-none placeholder-gray-400"
             rows="2"
             name="message"
             id="message"

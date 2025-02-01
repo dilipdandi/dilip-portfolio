@@ -13,7 +13,7 @@ const Header = () => {
   };
 
   return (
-    <header className="content p-4 fixed w-full border-b top-0 left-0 z-50">
+    <header className="content border p-7 fixed w-full top-0 left-0">
       <nav className="container mx-auto flex items-center justify-center">
         <div className="md:hidden">
           <button
@@ -45,7 +45,7 @@ const Header = () => {
           <li>
             <Link
               to={"resume"}
-              className="btn hover:text-gray-300"
+              className="btn"
               onClick={handleLinkClick} 
             >
               Resume
@@ -54,7 +54,7 @@ const Header = () => {
           <li>
             <Link
               to={"/"}
-              className="btn hover:text-gray-300"
+              className="btn"
               onClick={handleLinkClick} 
             >
               About Me
@@ -63,7 +63,7 @@ const Header = () => {
           <li>
             <Link
               to="education"
-              className="btn hover:text-gray-300 "
+              className="btn "
               onClick={handleLinkClick} 
             >
               Education
@@ -72,7 +72,7 @@ const Header = () => {
           <li>
             <Link
               to="skills"
-              className="btn hover:text-gray-300 "
+              className="btn"
               onClick={handleLinkClick} 
             >
               Skills
@@ -81,7 +81,7 @@ const Header = () => {
           <li>
             <Link
               to="projects"
-              className="btn hover:text-gray-300 "
+              className="btn"
               onClick={handleLinkClick} 
             >
               Projects
@@ -90,7 +90,7 @@ const Header = () => {
           <li>
             <Link
               to="certification"
-              className="btn hover:text-gray-300"
+              className="btn"
               onClick={handleLinkClick} 
             >
               Certification
@@ -99,7 +99,7 @@ const Header = () => {
           <li>
             <Link
               to="contact"
-              className="btn hover:text-gray-300"
+              className="btn"
               onClick={handleLinkClick} 
             >
               Contact

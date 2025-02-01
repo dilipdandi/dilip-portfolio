@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -23,6 +29,12 @@ html {
   border-radius: 6px;
 }
 
+
+.contact-input{
+  border: 1px solid #54a399;
+  background-color: #192f2b;
+  color: #d1f0ec;
+}
 
 .btn{
   width: fit-content;
@@ -46,26 +58,13 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  
+  border-radius: 0.5rem;
 }
 
- img::after{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: red;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  z-index: -1;
-  padding: 3px;
-  border-radius: 20px;
-}
 
 @keyframes zoomOut {
   0% {
-    transform: scale(0.4);
+    transform: scale(0.2);
   }
   100% {
     transform: scale(1);
@@ -73,5 +72,5 @@ html {
 }
 
 .zoom-out {
-  animation: zoomOut 2s ease-out forwards;
+  animation: zoomOut 2s ease-in forwards;
 }
