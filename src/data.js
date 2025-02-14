@@ -55,6 +55,26 @@ const skills = [
   
   const certificates = [
     {
+      name: "The Complete Javascript Course by Jonas Schmedthmann - Udemy",
+      link: "https://drive.google.com/file/d/1t5bFpgEaR_EL_0jeS41J5OV_w68RhMpB/view?usp=sharing",
+    },
+    {
+      name: "ReactJS - Complete Guide for Frontend Development - Udemy",
+      link: "https://drive.google.com/file/d/1mfmWsv_wOff_8wKGgB8NF1G4XXWJnm_v/view?usp=sharing"
+    },
+    {
+      name: "Automation Testing Certificate - Testingwala",
+      link: "https://drive.google.com/file/d/19vMZ_a_KJM5ySE2kafh5LqC9XAjoCbiY/view?usp=sharing",
+    },
+    {
+      name: "Selenium Essentials Training - Linkedin Learning",
+      link: "https://drive.google.com/file/d/127Nt-u7t3E6FnzPjdGJL_mAkl95ggX7d/view?usp=sharing",
+    },
+    {
+      name: "Python for Data Science - IBM",
+      link: "https://drive.google.com/file/d/1r49XytBohnV-n11yTUEC6Caw_5WLmSc5/view?usp=sharing",
+    },
+    {
       name: "CSS, Javascropt, Python Complete Course - Udemy",
       link: "https://drive.google.com/file/d/1t5bFpgEaR_EL_0jeS41J5OV_w68RhMpB/view?usp=sharing",
     },
@@ -96,6 +116,26 @@ const skills = [
     {
       name: "Gym Management System",
       gitLink: "https://github.com/dilipdandi/gym_management_system.git",
+      
+    },
+    {
+      name: "Investment Calculator",
+      gitLink: "https://github.com/dilipdandi/investment-calculator.git",
+      
+    },
+    {
+      name: "Pig Game",
+      gitLink: "https://github.com/dilipdandi/pig-game.git",
+      
+    },
+    {
+      name: "News Web App",
+      gitLink: "https://github.com/dilipdandi/news-web-app.git",
+      
+    },
+    {
+      name: "Digital Clock",
+      gitLink: "https://github.com/dilipdandi/digital-clock.git",
       
     },
   ];

@@ -63,7 +63,7 @@ const Header = () => {
           <li>
             <Link
               to="education"
-              className="btn "
+              className="btn"
               onClick={handleLinkClick} 
             >
               Education
