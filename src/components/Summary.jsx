@@ -1,7 +1,7 @@
 export default function Summary() {
     return (
         <>
-        <p className="mt-4">I am a passionate software engineer with hands-on experience in web development and automation testing. 
+        <p className="mt-4 text">I am a passionate software engineer with hands-on experience in web development and automation testing. 
         I enjoy creating innovative solutions that enhance user experiences and am particularly skilled in designing 
         user-friendly interfaces and efficient back-end systems. My expertise lies in front-end and back-end development,
         including a strong foundation in technologies like JavaScript, React, and Node.js, as well as proficiency in 

@@ -4,7 +4,7 @@ import { data } from "../data.js";
 const Educations = () => {
   const { education } = data;
   return (
-    <section className="content w-full py-2 px-4 md:py-4 md:px-4 border rounded-xl">
+    <section className="content w-full py-2 px-4 md:py-4 md:px-4 rounded-xl">
       <h1 className="text-xl md:text-2xl font-bold mb-4 md:mb-4">
         EDUCATION
       </h1>

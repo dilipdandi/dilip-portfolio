@@ -10,7 +10,7 @@ import Resume from "./components/Resume";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
-  {
+  { 
     path: "/",
     element: <Root />,
     children: [

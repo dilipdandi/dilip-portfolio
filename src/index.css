@@ -12,17 +12,26 @@
   display: none;
 }
 
-body {
-  background: radial-gradient(#186a5e, #053339);
-}
 html {
   scroll-behavior: smooth;
 }
 
-.content{
-  color: #221c18;
-  background: linear-gradient(#4df8df, #4df0f8);
+.education{
+  height: fit-content;
+  overflow: hidden;
 }
+
+.content{
+  color: white;
+  background-color: transparent
+}
+
+.bg-color{
+  color: #221c18;
+  background: linear-gradient(#60d7c5, #4df0f8);
+  overflow: hidden;
+}
+
 
 .border{
   box-shadow: 0 2px 8px rgba(35, 34, 34, 0.6);

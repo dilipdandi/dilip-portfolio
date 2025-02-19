@@ -43,38 +43,38 @@ const Resume = () => {
   };
 
   return (
-    <div className="content w-full flex items-center justify-center" id="resume-content">
+    <div className="bg-color w-full flex items-center justify-center" id="resume-content">
       <section className="content py-10 px-5 md:px-20 rounded-lg">
         <div className="content container mx-auto max-w-5xl border p-8 rounded-lg shadow-md">
           <div className="text-center mb-10 flex flex-col gap-4 items-center justify-center">
-            <h1 className="text-4xl font-bold mb-4">
+            <h1 className="text-4xl font-bold mb-4 text-backgroundColor">
               Dilip Santosh Dandi
             </h1>
-            <p className="text-xl">
+            <p className="text-xl text-backgroundColor">
               Web Developer | Automation Tester
             </p>
             <div>
               <a
                 href="mailto:dilipdandi4@gmail.com"
-                className="hover:text-green-400 font-semibold"
+                className="hover:text-green-400 font-semibold text-backgroundColor"
               >
                 dilipdandi4@gmail.com |
               </a>
               <a
                 href="tel:+917666833806"
-                className="hover:text-green-400 font-semibold"
+                className="hover:text-green-400 font-semibold text-backgroundColor"
               >
                 {" "}(+91) 7666833806 |
               </a>
               <a
                 href="https://linkedin.com/in/dilipdandi"
-                className="hover:text-green-400 font-semibold"
+                className="hover:text-green-400 font-semibold text-backgroundColor"
               >
                 {" "}linkedin.com/in/dilipdandi |
               </a>
               <a
                 href="https://github.com/dilipdandi"
-                className="hover:text-green-400 font-semibold"
+                className="hover:text-green-400 font-semibold text-backgroundColor"
               >
                 {" "}github.com/dilipdandi
               </a>
@@ -84,14 +84,14 @@ const Resume = () => {
             </button>
           </div>
           <div className="mb-8">
-            <h2 className="text-2xl font-semibold mb-3">
+            <h2 className="text-2xl font-semibold mb-3 text-backgroundColor">
               Profile Summary
             </h2>
            <Summary />
           </div>
 
           <div className="mb-8">
-            <h2 className="text-2xl font-semibold mb-3">
+            <h2 className="text-2xl font-semibold mb-3 text-backgroundColor">
               Education
             </h2>
             {education.map((edu) => (
