@@ -12,6 +12,7 @@
   display: none;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
@@ -22,14 +23,17 @@ html {
 }
 
 .content{
-  color: white;
-  background-color: transparent
+  margin-top: -1%;
+  color: #221c18;
+  /* background: linear-gradient(#ff1d58, #f75990); */
+  background-color: #FFF9F0 ;
+  color: #2C2C2C ;
 }
 
-.bg-color{
+.header-footer{
   color: #221c18;
-  background: linear-gradient(#60d7c5, #4df0f8);
-  overflow: hidden;
+  /* background: linear-gradient(#ff1d58, #f75990); */
+  background-color: #F8F9FA ;
 }
 
 
@@ -38,36 +42,42 @@ html {
   border-radius: 6px;
 }
 
-
-.contact-input{
-  border: 1px solid #54a399;
-  background-color: #192f2b;
-  color: #d1f0ec;
-}
-
 .btn{
   width: fit-content;
   margin-top: 1rem;
   padding: 0.4rem 0.6rem;
   border: none;
   border-radius: 4px;
-  background: #12352f;
-  color: #edfcfa;
+  background-color: #FFC75F;
+  color: black;
   font-size: 1.2rem;
   cursor: pointer;
 }
 
- .btn:hover {
-  background: #051715;
+.btn:hover{
+  background-color: #E1AD01 ;
 }
-
-
 
  img{
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
+  filter: drop-shadow(10px 10px 10px #000);
+}
+
+input,textarea {
+  background-color: #FFF9F0;  /* Soft Creamy White */
+  border: 2px solid #FFC75F;  /* Golden Yellow Border */
+  color: #2C3E50;  /* Dark Blue Text for readability */
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+input,textarea:focus {
+  border-color: #E1AD01;  /* Mustard Yellow on Focus */
+  box-shadow: 0 0 5px #FFC75F;  /* Soft Glow Effect */
 }
 
 

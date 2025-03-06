@@ -43,7 +43,7 @@ const Resume = () => {
   };
 
   return (
-    <div className="bg-color w-full flex items-center justify-center" id="resume-content">
+    <div className="content w-full flex items-center justify-center" id="resume-content">
       <section className="content py-10 px-5 md:px-20 rounded-lg">
         <div className="content container mx-auto max-w-5xl border p-8 rounded-lg shadow-md">
           <div className="text-center mb-10 flex flex-col gap-4 items-center justify-center">

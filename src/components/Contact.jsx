@@ -31,7 +31,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="content w-fit h-fit mx-auto my-12 px-2 py-4 rounded-xl border">
+    <section className="content w-fit h-fit mt-200 mx-auto my-12 px-2 py-4 rounded-xl border">
       <ToastContainer />
       <h1 className="text-2xl md:text-3xl font-bold text-center mb-2 text-primary ">
         CONTACT ME
@@ -47,12 +47,13 @@ const Contact = () => {
               Name
             </label>
             <input
-              className="contact-input w-full bg-gray-900 border text-gray-200 px-4 py-2 rounded-lg outline-none placeholder-gray-400"
+              className="w-full bg-gray-900 border text-gray-200 px-4 py-2 rounded-lg outline-none"
               type="text"
               id="name"
               name="user_name"
               required
               placeholder="Your Name"
+              autoComplete="off"
             />
           </div>
           <div className="flex flex-col w-full">
@@ -60,12 +61,13 @@ const Contact = () => {
               Email
             </label>
             <input
-              className="contact-input w-full bg-gray-900 border text-gray-200 px-4 py-2 rounded-lg outline-none placeholder-gray-400"
+              className="w-full bg-gray-900 border text-gray-200 px-4 py-2 rounded-lg outline-none"
               type="email"
               id="email"
               name="user_email"
               required
               placeholder="Your Email"
+              autoComplete="off"
             />
           </div>
         </div>
@@ -74,7 +76,7 @@ const Contact = () => {
             Message
           </label>
           <textarea
-            className="contact-input w-full border px-4 py-2 rounded-lg outline-none placeholder-gray-400"
+            className="w-full border px-4 py-2 rounded-lg outline-none"
             rows="2"
             name="message"
             id="message"
@@ -84,6 +86,20 @@ const Contact = () => {
         <button className="btn" type="submit">
           Send
         </button>
+        <div className="flex items-center justify-center gap-4 text-xl text-backgroundColor">
+        <a href="https://www.linkedin.com/in/dilipdandi" target="_blank">
+          <i className="fa-brands fa-linkedin-in "></i>
+        </a>
+        <a href="https://github.com/dilipdandi" target="_blank">
+          <i className="fa-brands fa-github"></i>
+        </a>
+        <a href="https://leetcode.com/u/dilipdandi/" target="_blank">
+          <i className="fa-solid fa-code"></i>
+        </a>
+        <a href="https://www.hackerrank.com/profile/dilipdandi90" target="_blank">
+          <i className="fa-brands fa-hackerrank"></i>
+        </a>
+      </div>
       </form>
     </section>
   );
