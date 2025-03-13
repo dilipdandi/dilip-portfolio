@@ -106,6 +106,14 @@ const skills = [
       name: "Data Analytics - Accenture",
       link: "https://drive.google.com/file/d/1RVvCmBfojxv7r6G1CD0nQ6ufwteoBTGm/view?usp=sharing",
     },
+    {
+      name: "Complete Guide in HTML & CSS - Udemy",
+      link: "https://drive.google.com/file/d/1LKoFLz-W5WxznCWijrM7NeZBBmSu95W9/view?usp=sharing"
+    },
+    {
+      name: "MongoDB - The Complete MongoDB Developer Course - Udemy",
+      link: "https://drive.google.com/file/d/1_j6_UbgzQhXlDopisjBY5AnRdTYcAaBG/view?usp=sharing"
+    },
   ];
   
   const projects = [
