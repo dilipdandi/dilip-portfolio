@@ -11,7 +11,7 @@ const Project = ({ name, gitLink }) => {
           target="_blank"
           rel="noopener noreferrer"
           href={gitLink}
-          className="btn my-2"
+          className="text-textColor border border-primaryColor hover:bg-[#F4A700] px-4 py-2 my-2"
         >
           Github Link
         </a>

@@ -4,7 +4,7 @@ import { data } from "../data.js";
 const Certification = () => {
   const { certificates } = data;
   return (
-    <article className="content w-full flex flex-col gap-4  px-6 py-6 border rounded-xl md:px-8 md:py-8 lg:px-10 lg:py-10">
+    <article className="content w-full h-full flex flex-col gap-4 px-6 py-6 border rounded-xl md:px-8 md:py-8 lg:px-10 lg:py-20">
       <h1 className="text-xl font-bold md:text-2xl lg:text-3xl">
         CERTIFICATIONS
       </h1>

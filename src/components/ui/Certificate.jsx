@@ -10,7 +10,7 @@ const Certificate = ({ name, link }) => {
         target="_blank"
         rel="noopener noreferrer"
         href={link}
-        className="btn mt-2 md:mt-0"
+        className="text-textColor border  border-primaryColor hover:bg-[#F4A700] mt-2 md:mt-0 px-4 py-2"
       >
         View
       </a>

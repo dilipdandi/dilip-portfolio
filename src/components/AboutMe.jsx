@@ -13,17 +13,19 @@ const AboutMe = () => {
 
   
   return (
-    <section id="about-me-section" ref={sectionRef} className="p-6 md:p-12 content">
+    <section ref={sectionRef} className="h-screen content pt-[5rem]">
       <figure className="flex flex-col items-center text-center">
         <img
           src={profilePic}
           alt="Dilip Dandi"
           className="img-animation zoom-out w-52 h-64 object-cover my-8"
         />
+        <div className="px-5 leading-7">
         <Summary />
+        </div>
             <Link
               to="/contact"
-              className="btn"
+              className="text-textColor border border-primaryColor hover:bg-[#F4A700] px-4 py-2 mt-5"
               onClick={handleLinkClick} 
             >
               Contact

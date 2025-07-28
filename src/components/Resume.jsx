@@ -43,55 +43,55 @@ const Resume = () => {
   };
 
   return (
-    <div className="content w-full flex items-center justify-center" id="resume-content">
+    <div className="content w-full flex items-center justify-center py-20" id="resume-content">
       <section className="content py-10 px-5 md:px-20 rounded-lg">
         <div className="content container mx-auto max-w-5xl border p-8 rounded-lg shadow-md">
           <div className="text-center mb-10 flex flex-col gap-4 items-center justify-center">
-            <h1 className="text-4xl font-bold mb-4 text-backgroundColor">
+            <h1 className="text-4xl font-bold mb-4 text-textColor">
               Dilip Santosh Dandi
             </h1>
-            <p className="text-xl text-backgroundColor">
+            <p className="text-xl text-textColor">
               Web Developer | Automation Tester
             </p>
             <div>
               <a
                 href="mailto:dilipdandi4@gmail.com"
-                className="hover:text-green-400 font-semibold text-backgroundColor"
+                className="hover:text-green-400 font-semibold text-textColor"
               >
                 dilipdandi4@gmail.com |
               </a>
               <a
                 href="tel:+917666833806"
-                className="hover:text-green-400 font-semibold text-backgroundColor"
+                className="hover:text-green-400 font-semibold text-textColor"
               >
                 {" "}(+91) 7666833806 |
               </a>
               <a
                 href="https://linkedin.com/in/dilipdandi"
-                className="hover:text-green-400 font-semibold text-backgroundColor"
+                className="hover:text-green-400 font-semibold text-textColor"
               >
                 {" "}linkedin.com/in/dilipdandi |
               </a>
               <a
                 href="https://github.com/dilipdandi"
-                className="hover:text-green-400 font-semibold text-backgroundColor"
+                className="hover:text-green-400 font-semibold text-textColor"
               >
                 {" "}github.com/dilipdandi
               </a>
             </div>
-            <button onClick={handleDownload} className="btn w-fit px-6 py-2 rounded-lg transition duration-300">
+            <button onClick={handleDownload} className="btn w-fit px-6 py-2 rounded-lg transition duration-300 border border-primaryColor hover:bg-[#F4A700]">
               Download Resume
             </button>
           </div>
           <div className="mb-8">
-            <h2 className="text-2xl font-semibold mb-3 text-backgroundColor">
+            <h2 className="text-2xl font-semibold mb-3 text-textColor">
               Profile Summary
             </h2>
            <Summary />
           </div>
 
           <div className="mb-8">
-            <h2 className="text-2xl font-semibold mb-3 text-backgroundColor">
+            <h2 className="text-2xl font-semibold mb-3 text-textColor">
               Education
             </h2>
             {education.map((edu) => (

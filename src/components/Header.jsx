@@ -13,8 +13,8 @@ const Header = () => {
   };
 
   return (
-    <header className="header-footer p-3 fixed w-full top-0 left-0 z-50">
-      <nav className="container mx-auto flex items-end justify-end">
+    <header className="header-footer p-5 fixed w-full z-50">
+      <nav className="container  flex items-end justify-center ">
         <div className="md:hidden">
           <button
             onClick={handleMenuToggle}

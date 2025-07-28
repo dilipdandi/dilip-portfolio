@@ -23,17 +23,16 @@ html {
 }
 
 .content{
-  margin-top: -1%;
   color: #221c18;
   /* background: linear-gradient(#ff1d58, #f75990); */
-  background-color: #FFF9F0 ;
+  background-color: #FFFDF6   ;
   color: #2C2C2C ;
 }
 
 .header-footer{
   color: #221c18;
   /* background: linear-gradient(#ff1d58, #f75990); */
-  background-color: #F8F9FA ;
+  background-color: #F4E285   ;
 }
 
 
@@ -42,21 +41,7 @@ html {
   border-radius: 6px;
 }
 
-.btn{
-  width: fit-content;
-  margin-top: 1rem;
-  padding: 0.4rem 0.6rem;
-  border: none;
-  border-radius: 4px;
-  background-color: #FFC75F;
-  color: black;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
 
-.btn:hover{
-  background-color: #E1AD01 ;
-}
 
  img{
   display: flex;
@@ -93,3 +78,4 @@ input,textarea:focus {
 .zoom-out {
   animation: zoomOut 2s ease-in forwards;
 }
+

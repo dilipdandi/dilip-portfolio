@@ -19,9 +19,11 @@ export default {
       // activeColor:"#ff6250",
       // highlightBg:"#090b23",
       // actionColor: "#fff",
-      borderColor:"#F8BBD0",
-      backgroundColor:"#242323",
-      textColor:"#FFF5F5"
+      borderColor:"#FFB703",
+      backgroundColor:"#8ECAE6",
+      textColor:"#2F2F2F",
+      primaryColor: "#FFB703",
+      secondaryColor: "#8ECAE6"
     },
   },
   plugins: [

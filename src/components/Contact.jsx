@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer } from "react-toastify";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 
 const Contact = () => {
   const form = useRef();
@@ -19,88 +18,93 @@ const Contact = () => {
       return;
     }
 
-    // Use form.current as the reference to the form
     emailjs.sendForm(serviceId, templateId, form.current, userId).then(
-      () => {
-        toast.success("Message sent successfully!");
-      },
-      (error) => {
-        toast.error("Something went wrong, try again!");
-      }
+      () => toast.success("Message sent successfully!"),
+      () => toast.error("Something went wrong, try again!")
     );
   };
 
   return (
-    <section className="content w-fit h-fit mt-200 mx-auto my-12 px-2 py-4 rounded-xl border">
+    <section className="w-full min-h-screen flex items-center justify-center content px-4 py-16">
       <ToastContainer />
-      <h1 className="text-2xl md:text-3xl font-bold text-center mb-2 text-primary ">
-        CONTACT ME
-      </h1>
-      <form
-        ref={form}
-        onSubmit={sendEmail}
-        className="flex flex-col gap-6 p-4 rounded-lg shadow-lg"
-      >
-        <div className="flex flex-col md:flex-row gap-6">
-          <div className="flex flex-col w-full">
-            <label htmlFor="name" className="text-lg mb-2 ">
-              Name
-            </label>
-            <input
-              className="w-full bg-gray-900 border text-gray-200 px-4 py-2 rounded-lg outline-none"
-              type="text"
-              id="name"
-              name="user_name"
-              required
-              placeholder="Your Name"
-              autoComplete="off"
-            />
+      <div className="max-w-3xl w-full bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-8 md:p-12 border border-borderColor">
+        <h1 className="text-3xl md:text-4xl font-bold text-center mb-6 text-yellow-700">
+          Contact Me
+        </h1>
+
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="flex flex-col gap-6"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex flex-col">
+              <label htmlFor="name" className="text-lg font-medium text-gray-700 mb-1">
+                Name
+              </label>
+              <input
+                className="w-full border border-borderColor text-gray-800 px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition"
+                type="text"
+                id="name"
+                name="user_name"
+                required
+                placeholder="Your Name"
+                autoComplete="off"
+              />
+            </div>
+            <div className="flex flex-col">
+              <label htmlFor="email" className="text-lg font-medium text-gray-700 mb-1">
+                Email
+              </label>
+              <input
+                className="w-full bg-white border border-borderColor text-gray-800 px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition"
+                type="email"
+                id="email"
+                name="user_email"
+                required
+                placeholder="Your Email"
+                autoComplete="off"
+              />
+            </div>
           </div>
-          <div className="flex flex-col w-full">
-            <label htmlFor="email" className="text-lg mb-2">
-              Email
+
+          <div className="flex flex-col">
+            <label htmlFor="message" className="text-lg font-medium text-gray-700 mb-1">
+              Message
             </label>
-            <input
-              className="w-full bg-gray-900 border text-gray-200 px-4 py-2 rounded-lg outline-none"
-              type="email"
-              id="email"
-              name="user_email"
+            <textarea
+              className="w-full bg-white border border-borderColor text-gray-800 px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition"
+              rows="4"
+              name="message"
+              id="message"
+              placeholder="Your Message"
               required
-              placeholder="Your Email"
-              autoComplete="off"
-            />
+            ></textarea>
           </div>
-        </div>
-        <div className="flex flex-col">
-          <label htmlFor="message" className="text-lg mb-2">
-            Message
-          </label>
-          <textarea
-            className="w-full border px-4 py-2 rounded-lg outline-none"
-            rows="2"
-            name="message"
-            id="message"
-            placeholder="Your Message"
-          ></textarea>
-        </div>
-        <button className="btn" type="submit">
-          Send
-        </button>
-        <div className="flex items-center justify-center gap-4 text-xl text-backgroundColor">
-        <a href="https://www.linkedin.com/in/dilipdandi" target="_blank">
-          <i className="fa-brands fa-linkedin-in "></i>
-        </a>
-        <a href="https://github.com/dilipdandi" target="_blank">
-          <i className="fa-brands fa-github"></i>
-        </a>
-        <a href="https://leetcode.com/u/dilipdandi/" target="_blank">
-          <i className="fa-solid fa-code"></i>
-        </a>
-        <a href="https://www.hackerrank.com/profile/dilipdandi90" target="_blank">
-          <i className="fa-brands fa-hackerrank"></i>
-        </a>
+
+          <button
+            className="border border-primaryColor hover:bg-[#F4A700] text-white font-semibold py-3 rounded-lg shadow-md transition duration-300"
+            type="submit"
+          >
+            Send Message
+          </button>
+
+          <div className="flex items-center justify-center gap-6 mt-4 text-2xl text-yellow-700">
+            <a href="https://www.linkedin.com/in/dilipdandi" target="_blank" className="hover:text-yellow-500 transition transform hover:scale-110">
+              <i className="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/dilipdandi" target="_blank" className="hover:text-yellow-500 transition transform hover:scale-110">
+              <i className="fa-brands fa-github"></i>
+            </a>
+            <a href="https://leetcode.com/u/dilipdandi/" target="_blank" className="hover:text-yellow-500 transition transform hover:scale-110">
+              <i className="fa-solid fa-code"></i>
+            </a>
+            <a href="https://www.hackerrank.com/profile/dilipdandi90" target="_blank" className="hover:text-yellow-500 transition transform hover:scale-110">
+              <i className="fa-brands fa-hackerrank"></i>
+            </a>
+          </div>
+        </form>
       </div>
-      </form>
     </section>
   );
 };
