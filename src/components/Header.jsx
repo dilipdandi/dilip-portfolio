@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <header className="header-footer p-5 fixed w-full z-50">
-      <nav className="container  flex items-end justify-center ">
+      <nav className="container  flex items-end justify-center max-md:justify-end">
         <div className="md:hidden">
           <button
             onClick={handleMenuToggle}
